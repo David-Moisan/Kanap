@@ -40,6 +40,12 @@ export default function ProductCard(props) {
             <p className="card-text">{product.description}</p>
             <Link to={`/product/${product.id}`} className="btn btn-outline-dark">
               Voir
+<<<<<<<Link HEAD
+=======
+            </Link>
+            <Link to="/" className="btn btn-success">
+              <i className="fa fa-plus" aria-hidden="true"></i>
+>>>>>>> homepage
             </Link>
           </div>
         </>
