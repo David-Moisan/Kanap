@@ -11,7 +11,7 @@ class Product(models.Model):
     name = models.CharField(max_length=150)
     image = models.ImageField(upload_to="photos/%Y/%m/%d/")
     description = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     color = models.CharField(max_length=13, choices=Colors.choices, default=Colors.BLANC)
     stock = models.IntegerField(blank=True)
     quantity = models.IntegerField(blank=False)
