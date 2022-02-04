@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
   const [product, setProduct] = useState([]);
@@ -37,9 +38,9 @@ export default function ProductCard(props) {
           <div className="card-body">
             <h3 className="card-title mb-5">{product.name}</h3>
             <p className="card-text">{product.description}</p>
-            <button type="button" className="btn btn-outline-dark">
+            <Link to={`/product/${product.id}`} className="btn btn-outline-dark">
               Voir
-            </button>
+            </Link>
           </div>
         </>
       );
