@@ -31,7 +31,6 @@ export default function ProductCard(props) {
           <img
             className="bd-placeholder-img card-img-top"
             width="100%"
-            height="100%"
             src={product.image}
             alt={product.name}
           />
@@ -48,10 +47,14 @@ export default function ProductCard(props) {
 
     for (let i = 0; i < list.length; i += 2) {
       result.push(
-        <div className="col mb-3" key={i} id={product.id}>
-          <div className="card shadow">{list[i]}</div>
-          <div className="card shadow">{list[i + 1] ? list[i + 1] : error}</div>
-        </div>
+        <>
+          <div className="col mb-3">
+            <div className="card shadow" key={i}  id={product.id} style={{minHeight: "40rem"}}>{list[i]}</div>
+          </div>
+          <div className="col mb-3">
+            <div className="card shadow" key={i} id={product.id}>{list[i + 1] ? list[i + 1] : error}</div>
+          </div>
+        </>
       );
     }
     return result;
