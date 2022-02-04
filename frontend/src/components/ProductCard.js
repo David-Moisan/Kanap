@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
   const [product, setProduct] = useState([]);
@@ -41,6 +42,9 @@ export default function ProductCard(props) {
             <button type="button" className="btn btn-outline-dark">
               Voir
             </button>
+            <Link to="/" className="btn btn-success">
+              <i className="fa fa-plus" aria-hidden="true"></i>
+            </Link>
           </div>
         </>
       );
